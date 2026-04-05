@@ -1,0 +1,129 @@
+:root {
+    --negro: #000000;
+    --text-color: #e4e4e4;
+    --azul: #090714;
+    --cyan: #4dd0e1;
+    --hover: #2E766C;
+}
+
+body {
+    background-color: var(--azul);
+}
+
+.header-container {
+    width: 95%;
+    text-align: center;
+    #welcome {
+        color: var(--text-color);
+        h1 {
+            font-size: 4rem;
+            padding: 4rem 0 0 0;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            opacity: 0.6;
+            font-size: 1.4rem;
+            padding: 0 6rem;
+        }
+    }
+}
+
+.container {
+    margin-top: 4rem;
+    width: 95%;
+    padding: 1rem;
+    color: var(--text-color);
+
+    section {
+        h2 {
+            padding-left: 2rem;
+            font-size: 2.6rem;
+        }
+
+        div {
+            text-align: center;
+            margin: 5rem 0;
+
+            h3 {
+                opacity: 0.6;
+                font-size: 2rem;
+            }
+
+            p {
+                margin: 3rem 5rem;
+                font-size: 1.15rem;
+            }
+
+            a {
+                display: inline-block;
+                background-color: var(--hover);
+                color: var(--negro);
+                padding: 0.6rem 1.2rem;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1);
+                transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+
+                &:hover {
+                    background-color: var(--cyan);
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 12px rgba(255, 255, 255, 0.2);
+                    cursor: pointer;
+                }
+
+                &:focus {
+                    outline: 4px solid var(--cyan);
+                    outline-offset: 2px;
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    width: 95%;
+    padding: 1rem;
+    color: var(--text-color);
+
+    section {
+        h2 {
+            padding-left: 2rem;
+            font-size: 2.6rem;
+        }
+
+        p {
+            margin: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        a {
+            color: var(--cyan);
+            text-decoration: none;
+        }
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .container {
+        section {
+            div {
+                text-align: left;
+
+                h3 {
+                    margin-left: 6rem;
+                }
+
+                p {
+                    margin-left: 3rem;
+                }
+
+                a {
+                    margin-left: 6rem;
+                }
+            }
+        }
+    }
+}
