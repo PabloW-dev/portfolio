@@ -6,31 +6,35 @@
     --hover: #2E766C;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 body {
     background-color: var(--azul);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .header-container {
     max-width: 100%;
     width: 95%;
     text-align: center;
-    box-sizing: border-box;
     #welcome {
         color: var(--text-color);
         h1 {
             font-size: 4rem;
             padding: 4rem 0 0 0;
             margin-bottom: 3rem;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         h2 {
             opacity: 0.6;
             font-size: 1.4rem;
             padding: 0 6rem;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
     }
 }
@@ -41,13 +45,10 @@ body {
     width: 95%;
     padding: 1rem;
     color: var(--text-color);
-    box-sizing: border-box;
     section {
         h2 {
             padding-left: 2rem;
             font-size: 2.6rem;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         div {
@@ -57,15 +58,11 @@ body {
             h3 {
                 opacity: 0.6;
                 font-size: 2rem;
-                word-wrap: break-word;
-                overflow-wrap: break-word;
             }
 
             p {
                 margin: 3rem 5rem;
                 font-size: 1.15rem;
-                word-wrap: break-word;
-                overflow-wrap: break-word;
             }
 
             a {
@@ -78,8 +75,6 @@ body {
                 font-weight: bold;
                 box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1);
                 transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-                word-wrap: break-word;
-                overflow-wrap: break-word;
 
                 &:hover {
                     background-color: var(--cyan);
@@ -102,28 +97,46 @@ body {
     width: 95%;
     padding: 1rem;
     color: var(--text-color);
-    box-sizing: border-box;
     section {
         h2 {
             padding-left: 2rem;
             font-size: 2.6rem;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         p {
             margin: 0.5rem;
             font-size: 1.2rem;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         a {
             color: var(--cyan);
             text-decoration: none;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
+    }
+}
+
+
+.cv-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--hover);
+    color: var(--negro);
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1.5rem 3rem;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+        background-color: var(--cyan);
+        transform: translateY(-2px);
+    }
+
+    &:focus {
+        outline: 4px solid var(--cyan);
+        outline-offset: 2px;
     }
 }
 
@@ -145,6 +158,11 @@ body {
                 a {
                     margin-left: 6rem;
                 }
+            }
+
+            .cv-button {
+                display: inline-block;
+                margin-left: 6rem;
             }
         }
     }
