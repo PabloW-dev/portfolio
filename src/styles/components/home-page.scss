@@ -1,0 +1,201 @@
+@use "../mixins";
+
+
+.home {
+    position: relative;
+    padding-top: 5rem;
+
+    @include mixins.maxiheight {
+        padding-top: 9rem;
+    }
+
+    @include mixins.miniheight {
+        padding-top: 1rem;
+    }
+
+    transition:
+        opacity 1.5s ease;
+
+    .decoration {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+
+        max-width: 30px;
+    }
+
+    &__center {
+        width: 60%;
+        margin: 0 auto 0;
+    }
+
+    &__hero {
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .title {
+            margin-top: 0;
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: var(--text-color);
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.5;
+        }
+
+        &-SKL {
+            margin-top: 3rem;
+
+            @include mixins.maxiheight {
+                margin-top: 5rem;
+            }
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 7.4rem;
+
+            @include mixins.miniheight {
+                margin-top: 2rem;
+                gap: 6.5rem;
+            }
+
+            width: 100%;
+
+            > div {
+                flex: 1;
+                min-width: 0;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                position: relative;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 40px;
+                    height: 1px;
+                    margin-top: 0.75rem;
+                }
+
+                &:nth-child(1)::after {
+                    background-color: var(--green);
+                }
+
+                &:nth-child(2)::after {
+                    background-color: var(--yellow);
+                }
+
+                &:nth-child(3)::after {
+                    background-color: var(--red);
+                }
+            }
+
+            .icon {
+                width: 72px;
+                height: 72px;
+
+                @include mixins.miniheight {
+                    width: 52px;
+                    height: 52px;
+                }
+
+                object-fit: contain;
+                margin-bottom: 0;
+            }
+
+            p {
+                text-align: center;
+                font-family: "Montserrat", sans-serif;
+                font-size: 8px;
+                font-weight: 400;
+                color: var(--text-color);
+                text-transform: uppercase;
+                letter-spacing: .35rem;
+                line-height: 1.7;
+
+                @include mixins.miniheight {
+                    font-size: 7px;
+                }
+            }
+        }
+    }
+
+    &__menu {
+        margin-top: 2rem;
+
+        @include mixins.maxiheight {
+            margin-top: 4rem;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.menu__button {
+    display: inline-flex;
+
+    @include mixins.miniheight {
+        display: none;
+    }
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: 148px;
+    height: 52px;
+    padding: 0.75rem 1rem;
+    
+    background-color: var(--secundario);
+    border: 1px solid var(--text-secondary);
+    border-radius: 2px;
+
+    color: var(--button-text);
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.12rem;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.1s ease;
+
+    &:active {
+        background-color: var(--green);
+        border-color: var(--green);
+        color: var(--negro);
+        transform: scale(0.97);
+    }
+
+    &:focus-visible,
+    &:hover {
+        outline: 2px solid var(--text-color);
+        outline-offset: 3px;
+    }
+}

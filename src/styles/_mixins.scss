@@ -1,0 +1,34 @@
+@use "./variables";
+
+
+
+@mixin tablet {
+    @media (min-width: variables.$tablet) and (max-width: variables.$tablet-max) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: variables.$desktop) and (max-width: variables.$desktop-max) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: variables.$large) {
+        @content;
+    }
+}
+
+
+@mixin miniheight {
+    @media (max-height: variables.$max-height) {
+        @content;
+    }
+}
+
+@mixin maxiheight {
+    @media (min-height: variables.$min-height) {
+        @content;
+    }
+}

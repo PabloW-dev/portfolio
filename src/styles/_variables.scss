@@ -1,0 +1,24 @@
+//CUSTOM: usar para lo que necesita cambiar dinámicamente
+
+:root {
+    --negro: #0B0B0C;
+    --secundario: #111113;
+    --text-color: #E8E5De;
+    --text-secondary: #858582;
+    --green: #36c5b9;
+    --yellow: #eb8939;
+    --red: #e25d68;
+    --button-text: #819ae9;
+}
+
+
+//SASS: usar para hacer cálculos previos
+
+
+$tablet: 768px;
+$tablet-max: 1199px;
+$desktop: 1200px;
+$desktop-max: 1919px;
+$large: 1920px;
+$max-height: 665px;
+$min-height: 900px;

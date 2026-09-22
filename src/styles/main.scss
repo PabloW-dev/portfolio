@@ -1,0 +1,30 @@
+@use "./mixins";
+@use "./variables";
+
+@use "./components/home-page.scss";
+
+
+@use "./components/tools/carousel.scss";
+@use "./components/tools/FAB-CTA.scss";
+@use "./components/tools/FAB-Sitemap.scss";
+@use "./components/tools/modal.scss";
+@use "./components/tools/modal-sitemap.scss";
+@use "./components/tools/footer.scss";
+
+body {
+    background-color: var(--negro);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    .green {
+        color: var(--green);
+    }
+
+    .yellow {
+        color: var(--yellow);
+    }
+
+    .red {
+        color: var(--red);
+    }
+}
