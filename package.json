@@ -1,6 +1,7 @@
 {
   "name": "pablowdev porfolio",
   "version": "1.0.0",
+  "homepage": "https://pablow-dev.github.io/portfolio",
   "private": true,
   "dependencies": {
     "react": "^19.3.0",
