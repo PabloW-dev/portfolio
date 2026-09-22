@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.6a96f2fe.css",
-    "main.js": "/static/js/main.c86d731d.js",
+    "main.js": "/static/js/main.f3e21208.js",
     "static/media/UX-Strategy-icon.png": "/static/media/UX-Strategy-icon.68bbcacb18be5b4740a8.png",
     "static/media/FAB-CTA-icon.png": "/static/media/FAB-CTA-icon.c0fa9c33e208a31f020c.png",
     "static/media/Analytical-Debugging-icon.png": "/static/media/Analytical-Debugging-icon.35318a144f236b91c709.png",
     "static/media/PW-logo.png": "/static/media/PW-logo.37c7df355faec4baee4f.png",
     "index.html": "/index.html",
     "main.6a96f2fe.css.map": "/static/css/main.6a96f2fe.css.map",
-    "main.c86d731d.js.map": "/static/js/main.c86d731d.js.map"
+    "main.f3e21208.js.map": "/static/js/main.f3e21208.js.map"
   },
   "entrypoints": [
     "static/css/main.6a96f2fe.css",
-    "static/js/main.c86d731d.js"
+    "static/js/main.f3e21208.js"
   ]
 }
