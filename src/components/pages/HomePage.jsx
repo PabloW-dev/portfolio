@@ -70,7 +70,7 @@ export default function HomePage({ previousPath, modal }) {
             </div>
             <div>
               <img className="icon" src={UXicon} alt="" />
-              <p className="red">UX Strategy</p>
+              <p className="red">UX <br /> Strategy</p>
             </div>
           </div>
         </div>

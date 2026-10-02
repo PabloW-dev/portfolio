@@ -1,0 +1,192 @@
+@use "../mixins";
+
+
+.personal-projects {
+    width: 100%;
+    min-height: 100%;
+
+    @include mixins.miniheight {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    @include mixins.tablet {
+        padding-bottom: 10rem;
+    }
+
+
+    section {
+        box-sizing: border-box;
+        padding-top: 2rem;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include mixins.miniheight {
+            justify-content: flex-start;
+            padding-top: 0;
+        }
+
+        @include mixins.desktop {
+            justify-content: center;
+        }
+
+        @include mixins.maxiheight {
+            padding-top: 3rem;
+        }
+
+        &.personal-projects__incoming {
+            @include mixins.maxiheight {
+                padding-top: 4rem;
+            }
+        }
+
+
+        width: 100%;
+        min-height: 100%;
+    }
+
+    &__intro {
+        h1 {
+            margin-bottom: 3rem;
+            margin: 0 2rem;
+
+            @include mixins.miniheight {
+                margin-bottom: 1rem;
+            }
+
+            @include mixins.maxiheight {
+                margin-bottom: 4rem;
+            }
+
+            @include mixins.tablet {
+                margin-top: 1rem;
+            }
+
+            color: var(--text-color);
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.5;
+        }
+
+        div {
+            padding-top: 4rem;
+            display: flex;
+            flex-direction: column;
+
+            @include mixins.lateral {
+                padding-top: 0;
+                flex-direction: row;
+
+                .arrow {
+                    transform: 
+                        rotate(-90deg) 
+                        translateY(-5px)
+                        translateX(2.5px);
+                }
+            }
+
+            @include mixins.maxiheight {
+                padding-top: 2rem;
+            }
+
+            
+            align-items: center;
+            gap: .5rem;
+        }
+
+        p {
+            margin: 0;
+            text-align: center;
+            color: var(--text-color);
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.5;
+        }
+
+        .arrow {
+            scale: 1.25;
+        }
+    }
+
+    &__incoming {
+
+        h1 {
+            margin-bottom: 3rem;
+            margin: 0 2rem;
+
+            @include mixins.miniheight {
+                margin-bottom: 1rem;
+            }
+
+            @include mixins.maxiheight {
+                margin-bottom: 3rem;
+            }
+
+            @include mixins.tablet {
+                padding-top: 2rem;
+            }
+
+            color: var(--text-color);
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.5;
+        }
+
+        div {
+            width: 70%;
+            max-width: 700px;
+            text-align: center;
+
+            @include mixins.lateral {
+                width: 80%;
+            }
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+            margin: 0;
+
+            @include mixins.desktop {
+                padding-top: 5rem;
+            }
+            
+            padding-bottom: 1rem;
+            text-align: center;
+            color: var(--text-color);
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.5;
+        }
+
+        p {
+            margin: 0;
+            text-align: center;
+            color: var(--text-color);
+            font-family: "Montserrat", sans-serif;
+            font-size: .9rem;
+
+            @include mixins.miniheight {
+                font-size: .6rem;
+            }
+
+            @include mixins.maxiheight {
+                margin-top: 2rem;
+            }
+
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.5;
+        }
+    }
+}

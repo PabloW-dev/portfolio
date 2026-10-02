@@ -1,0 +1,153 @@
+@use "../../mixins";
+
+.card {
+    width: 85%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    background: var(--background-secondary);
+
+    @include mixins.lateral {
+        flex-direction: row;
+    }
+
+    @include mixins.tablet {
+        flex-direction: column;
+    }
+
+    &__img {
+        width: 240px;
+        height: 240px;
+        object-fit: contain;
+        user-select: none;
+        -webkit-user-drag: none;
+
+        @include mixins.miniheight {
+            width: 120px;
+            height: 120px;
+        }
+
+        @include mixins.lateral {
+            margin-left: 4rem;
+        }
+
+        @include mixins.tablet {
+            margin-left: 0;
+        }
+
+        @include mixins.desktop {
+            width: 320px;
+            height: 320px;  
+        }
+    }
+
+    &__title {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+
+        h2 {
+            margin: 0;
+            text-align: center;
+            color: var(--text-color);
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.5;
+            font-size: 2rem;
+
+            @include mixins.miniheight {
+                font-size: 1rem;
+            }
+        }
+
+        span {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        p {
+            margin: 1.5rem;
+            max-width: 55ch;
+            text-align: center;
+            line-height: 1.6;
+            color: var(--text-color);
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.5;
+            font-size: .8rem;
+
+            @include mixins.miniheight {
+                display: none;
+            }
+        }
+
+        .CTA__button {
+            -webkit-user-drag: none;
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            box-sizing: border-box;
+            width: 148px;
+            height: 52px;
+            padding: 0.75rem 1rem;
+            
+            background-color: var(--secundario);
+            border: 1px solid var(--text-secondary);
+            border-radius: 2px;
+
+            color: var(--button-text);
+            font-family: "Montserrat", sans-serif;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 0.12rem;
+            line-height: 1.4;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            transition:
+                background-color 0.15s ease,
+                border-color 0.15s ease,
+                transform 0.1s ease;
+
+            &:active {
+                background-color: var(--green);
+                border-color: var(--green);
+                color: var(--negro);
+                transform: scale(0.97);
+            }
+
+            &:focus-visible,
+            &:hover {
+                outline: 2px solid var(--text-color);
+                outline-offset: 3px;
+            }
+
+            @include mixins.miniheight {
+                margin-top: .5rem;
+
+                width: 108px;
+                height: 32px;
+                padding: 0.5rem 0.7rem;
+            }
+        }
+    }
+
+    
+}

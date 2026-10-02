@@ -2,8 +2,12 @@
 @use "./variables";
 
 @use "./components/home-page.scss";
+@use "./components/presonal-projects-page.scss";
+@use "./components/external-projects-page.scss";
 
 
+
+@use "./components/tools/card.scss";
 @use "./components/tools/carousel.scss";
 @use "./components/tools/FAB-CTA.scss";
 @use "./components/tools/FAB-Sitemap.scss";
@@ -15,6 +19,7 @@ body {
     background-color: var(--negro);
     word-wrap: break-word;
     overflow-wrap: break-word;
+    overflow: hidden;
 
     .green {
         color: var(--green);

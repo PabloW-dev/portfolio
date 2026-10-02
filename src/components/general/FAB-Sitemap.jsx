@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 
 import { openModal, closeModal } from "./modal/modal";
 
-import { FaSitemap } from "react-icons/fa";
-
 export default function FABSitemap({ currentPath, modal, setModal }) {
     const [isVisible, setIsVisible] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
@@ -53,7 +51,6 @@ export default function FABSitemap({ currentPath, modal, setModal }) {
               });
       }}
     >
-      <FaSitemap className="icon" />
     </button>
   );
 }
