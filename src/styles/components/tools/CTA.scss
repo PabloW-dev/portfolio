@@ -1,0 +1,70 @@
+@use "../../mixins";
+
+.CTA {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    translate: -50%;
+
+    padding: .4rem 1.2rem;
+
+    background: rgb(80, 5, 80);
+    border: 2px solid var(--text-secondary);
+    border-radius: 4px;
+
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+    span {
+
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 0.12rem;
+        text-align: center;
+        line-height: 1.4;
+        color: var(--text-color);
+
+        @include mixins.miniheight {
+            font-size: 12px;
+        }
+
+        @include mixins.lateral {
+            font-size: 17px;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.12rem;
+        line-height: 1.4;
+        color: var(--text-secondary);
+
+        @include mixins.miniheight {
+            font-size: 10px;
+        }
+
+        @include mixins.lateral {
+            font-size: 14px;
+        }
+    }
+
+
+    &:active {
+        background-color: var(--green);
+        border-color: var(--green);
+        color: var(--negro);
+        transform: scale(0.97);
+    }
+
+    &:focus-visible,
+    &:hover {
+        outline: 2px solid var(--green);
+        outline-offset: 3px;
+        cursor: pointer;
+    }
+}

@@ -14,10 +14,13 @@ export default function Card({ project, currentIndex, carouselKey, modal }) {
         <p>{project?.description}</p>
         
         <NavLink to={project?.url} className="CTA__button"
-          onClick={() => sessionStorage.setItem(`${carouselKey}-return`, JSON.stringify({
-            index: currentIndex,
-            locationKey: location.key
-          }))}
+          onClick={() => {
+            if (!carouselKey) return;
+            
+            sessionStorage.setItem(`${carouselKey}-return`, JSON.stringify({
+              index: currentIndex,
+              locationKey: location.key
+          }))}}
           tabIndex={modal.open ? -1 : 0}
           style={{
             pointerEvents: modal.open

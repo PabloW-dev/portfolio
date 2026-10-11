@@ -3,14 +3,26 @@
 
 import { Children, cloneElement, useState, useEffect } from "react";
 
-import { FaArrowLeft, FaArrowRight, FaCircle } from "react-icons/fa";
+import { 
+    FaArrowLeft, 
+    FaArrowRight, 
+    FaCircle,
+    FaChevronDown,
+    FaChevronUp 
+} from "react-icons/fa";
 
 
+export default function Carousel({ 
+    children, 
+    initialIndex = 0, 
+    carouselKey 
+}) {
 
-export default function Carousel({ children, initialIndex, carouselKey }) {
     const [pointersDiscovered, setPointersDiscovered] = useState(
         localStorage.getItem("carousel-pointers-discovered") === "true"
     );
+
+    const [isPointerMenuOpen, setIsPointerMenuOpen] = useState(false);
     
 
     const [direction, setDirection] = useState(null);
@@ -75,6 +87,8 @@ export default function Carousel({ children, initialIndex, carouselKey }) {
     };
 
     useEffect(() => {
+        if (!carouselKey) return;
+        
         sessionStorage.removeItem(`${carouselKey}-return`);
     }, []);
     
@@ -115,7 +129,9 @@ export default function Carousel({ children, initialIndex, carouselKey }) {
 
   return (
     <div className="carousel">
+
       <nav className="carousel__navigation">
+
         <button className="carousel__icon"
             onClick={previous}
             aria-label="Previous slide"
@@ -124,34 +140,55 @@ export default function Carousel({ children, initialIndex, carouselKey }) {
             <FaArrowLeft aria-hidden="true" />
         </button>
 
-        <div className="carousel__container">
-            {Children.map(children, (_, index) => {
+        <div className="carousel__pointers">
 
-                return (
-                    <button
-                        key={index}
-                        className={`carousel__pointer ${
-                            !pointersDiscovered &&
-                            index === (currentIndex + 1) % slides.length
-                                ? "carousel__pointer--hint"
-                                : ""
-                        }`}
-                        onClick={() => {
-                            if (isAnimating) return;
+            <button
+                className="carousel__menu"
+                onClick={() => 
+                    setIsPointerMenuOpen((isOpen) => !isOpen)
+                }
+                aria-expanded={isPointerMenuOpen}
+            >
+                {isPointerMenuOpen
+                    ? <FaChevronUp aria-hidden="true" />
+                    : <FaChevronDown aria-hidden="true" />
+                }
+            </button>
 
-                            setCurrentIndex(index);
-                            setPointersDiscovered(true);
-                            
-                            localStorage.setItem("carousel-pointers-discovered", "true");
-                        }}
-                        aria-label={`Go to slide ${index + 1}`}
-                        aria-current={currentIndex === index ? "true" : undefined}
-                        disabled={isAnimating}
-                    >
-                        <FaCircle aria-hidden="true" />
-                    </button>
-                );     
-            })}  
+            {isPointerMenuOpen && (
+                <div className="carousel__container">
+                    {Children.map(children, (_, index) => {
+
+                        return (
+                            <button
+                                key={index}
+                                className={`carousel__pointer ${
+                                    !pointersDiscovered &&
+                                    index === (currentIndex + 1) % slides.length
+                                        ? "carousel__pointer--hint"
+                                        : ""
+                                }`}
+                                onClick={() => {
+                                    if (isAnimating) return;
+
+                                    setCurrentIndex(index);
+                                    setPointersDiscovered(true);
+                                    setIsPointerMenuOpen(false);
+                                    
+                                    localStorage.setItem("carousel-pointers-discovered", "true");
+                                }}
+                                aria-label={`Go to slide ${index + 1}`}
+                                aria-current={currentIndex === index ? "true" : undefined}
+                                disabled={isAnimating}
+                            >
+                                <FaCircle aria-hidden="true" />
+                            </button>
+                        );     
+                    })}  
+                </div>
+            )}
+
+            
         </div>
         
 

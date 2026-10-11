@@ -1,0 +1,50 @@
+@use "../../mixins";
+
+.table-card {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+
+
+    font-size: 0.8rem;
+    color: var(--text-color);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+
+    @include mixins.miniheight {
+        font-size: 0.7rem;
+    }
+
+    @include mixins.lateral {
+        width: 60%;
+    }
+
+    @include mixins.desktop {
+        width: 40%;
+    }
+
+    @include mixins.maxiheight {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        border: 1px solid #9a6b2d;
+        padding: 0 .25rem;
+
+        @include mixins.maxiheight {
+            padding: .25rem;
+        }
+    }
+
+    tbody th {
+        text-align: left;
+    }
+
+
+    .selected th,
+    .selected td {
+    background-color: var(--secundario);
+    color: var(--green);
+}
+}
