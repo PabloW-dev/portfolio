@@ -1,18 +1,26 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f3c9191a.css",
-    "main.js": "/portfolio/static/js/main.3733ce33.js",
+    "main.css": "/portfolio/static/css/main.61fed89e.css",
+    "main.js": "/portfolio/static/js/main.e429de37.js",
+    "static/media/yogaGardenTrailer.mp4": "/portfolio/static/media/yogaGardenTrailer.a76573e259262b0b4808.mp4",
+    "static/media/PersistenceClickerTrailer.mp4": "/portfolio/static/media/PersistenceClickerTrailer.a07358d420f3e4c82ba5.mp4",
     "static/media/PCLogo.png": "/portfolio/static/media/PCLogo.496191227889391390dc.png",
+    "static/media/Pc1.jpg": "/portfolio/static/media/Pc1.472f3d59d8773d9ccc08.jpg",
+    "static/media/Pc3.jpg": "/portfolio/static/media/Pc3.ec636dbcd1c998e01269.jpg",
     "static/media/UX-Strategy-icon.png": "/portfolio/static/media/UX-Strategy-icon.68bbcacb18be5b4740a8.png",
+    "static/media/Yg1.jpg": "/portfolio/static/media/Yg1.e4e91cc33f3e88b93ea6.jpg",
+    "static/media/Yg3.jpg": "/portfolio/static/media/Yg3.1620254e0d35b857ad9f.jpg",
+    "static/media/Yg2.jpg": "/portfolio/static/media/Yg2.753be74d58b99f1be113.jpg",
     "static/media/YGLogo.png": "/portfolio/static/media/YGLogo.748d03044cd0bb73ea5c.png",
+    "static/media/Pc2.jpg": "/portfolio/static/media/Pc2.ada0d8ef3935abb82bf6.jpg",
     "static/media/FAB-CTA-icon.png": "/portfolio/static/media/FAB-CTA-icon.c0fa9c33e208a31f020c.png",
     "static/media/Analytical-Debugging-icon.png": "/portfolio/static/media/Analytical-Debugging-icon.35318a144f236b91c709.png",
     "index.html": "/portfolio/index.html",
-    "main.f3c9191a.css.map": "/portfolio/static/css/main.f3c9191a.css.map",
-    "main.3733ce33.js.map": "/portfolio/static/js/main.3733ce33.js.map"
+    "main.61fed89e.css.map": "/portfolio/static/css/main.61fed89e.css.map",
+    "main.e429de37.js.map": "/portfolio/static/js/main.e429de37.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3c9191a.css",
-    "static/js/main.3733ce33.js"
+    "static/css/main.61fed89e.css",
+    "static/js/main.e429de37.js"
   ]
 }
