@@ -80,7 +80,7 @@ export default function SkillsTechsPage({ modal }) {
         </section>
 
         <section className="skill-tech__video">
-          <h1>FROM PERSISTENCECLICKER</h1>
+          <h1>FROM PERS.CLIKCER</h1>
           <video
             src={From1}
             controls
@@ -100,7 +100,7 @@ export default function SkillsTechsPage({ modal }) {
         </section>
 
         <section className="skill-tech__video">
-          <h1>FROM PERSISTENCECLICKER</h1>
+          <h1>FROM PERS.CLICKER</h1>
           <video
             src={From2}
             controls
