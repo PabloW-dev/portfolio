@@ -1,11 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.61fed89e.css",
-    "main.js": "/portfolio/static/js/main.e429de37.js",
+    "main.css": "/portfolio/static/css/main.ddf4f631.css",
+    "main.js": "/portfolio/static/js/main.6acf709e.js",
     "static/media/yogaGardenTrailer.mp4": "/portfolio/static/media/yogaGardenTrailer.a76573e259262b0b4808.mp4",
+    "static/media/persistenceClickerStates.mp4": "/portfolio/static/media/persistenceClickerStates.b3ddb20d65ab76f8be42.mp4",
     "static/media/PersistenceClickerTrailer.mp4": "/portfolio/static/media/PersistenceClickerTrailer.a07358d420f3e4c82ba5.mp4",
+    "static/media/persistenceClickerPersistence.mp4": "/portfolio/static/media/persistenceClickerPersistence.6353ecbe92764de84e82.mp4",
+    "static/media/yogaGardenPersistence.mp4": "/portfolio/static/media/yogaGardenPersistence.f10084b4d8e6c209bbf9.mp4",
+    "static/media/yogaGardenFAB-CTA.mp4": "/portfolio/static/media/yogaGardenFAB-CTA.ca1b877e809676e21a69.mp4",
     "static/media/PCLogo.png": "/portfolio/static/media/PCLogo.496191227889391390dc.png",
     "static/media/Pc1.jpg": "/portfolio/static/media/Pc1.472f3d59d8773d9ccc08.jpg",
+    "static/media/UC-243f2d2e-801f-472f-80d8-d52e81c346c7.pdf": "/portfolio/static/media/UC-243f2d2e-801f-472f-80d8-d52e81c346c7.52047c0b8e36537d4699.pdf",
+    "static/media/UC-565f8d5a-d5e5-4697-b73f-e6602c7b7476.pdf": "/portfolio/static/media/UC-565f8d5a-d5e5-4697-b73f-e6602c7b7476.36b74a6df37e8b15232f.pdf",
+    "static/media/UC-39b3b775-abb4-43ef-84bf-b2cf20ddf8c6.pdf": "/portfolio/static/media/UC-39b3b775-abb4-43ef-84bf-b2cf20ddf8c6.e552d88a6c45e3cd0c53.pdf",
     "static/media/Pc3.jpg": "/portfolio/static/media/Pc3.ec636dbcd1c998e01269.jpg",
     "static/media/UX-Strategy-icon.png": "/portfolio/static/media/UX-Strategy-icon.68bbcacb18be5b4740a8.png",
     "static/media/Yg1.jpg": "/portfolio/static/media/Yg1.e4e91cc33f3e88b93ea6.jpg",
@@ -16,11 +23,11 @@
     "static/media/FAB-CTA-icon.png": "/portfolio/static/media/FAB-CTA-icon.c0fa9c33e208a31f020c.png",
     "static/media/Analytical-Debugging-icon.png": "/portfolio/static/media/Analytical-Debugging-icon.35318a144f236b91c709.png",
     "index.html": "/portfolio/index.html",
-    "main.61fed89e.css.map": "/portfolio/static/css/main.61fed89e.css.map",
-    "main.e429de37.js.map": "/portfolio/static/js/main.e429de37.js.map"
+    "main.ddf4f631.css.map": "/portfolio/static/css/main.ddf4f631.css.map",
+    "main.6acf709e.js.map": "/portfolio/static/js/main.6acf709e.js.map"
   },
   "entrypoints": [
-    "static/css/main.61fed89e.css",
-    "static/js/main.e429de37.js"
+    "static/css/main.ddf4f631.css",
+    "static/js/main.6acf709e.js"
   ]
 }
