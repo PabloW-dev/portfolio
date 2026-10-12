@@ -1,0 +1,272 @@
+@use "../mixins";
+
+
+.skill-tech {
+    width: 100%;
+    min-height: 100%;
+
+    @include mixins.miniheight {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    @include mixins.tablet {
+        padding-bottom: 10rem;
+    }
+
+    h1 {
+        margin: 0;
+        text-align: center;
+        color: var(--text-color);
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: .35rem;
+        line-height: 1.5;
+        font-size: 1.5rem;
+
+        @include mixins.desktop {
+            font-size: 2rem;
+        }
+    }
+
+    &__landing {
+        box-sizing: border-box;
+        padding-top: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include mixins.lateral {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        @include mixins.tablet {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        @include mixins.miniheight {
+            padding-top: 0;
+        }
+
+        p {
+            margin: 2rem;
+            max-width: 55ch;
+            text-align: center;
+            color: var(--button-text);
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.8;
+            font-size: .8rem;
+            font-style: italic;
+        }
+    }
+
+    &__description {
+        box-sizing: border-box;
+        padding-top: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include mixins.lateral {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        @include mixins.tablet {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        @include mixins.miniheight {
+            padding-top: 0;
+        }
+
+        p {
+            margin: 1rem;
+            max-width: 55ch;
+            text-align: center;
+            color: var(--text-color);
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.5;
+            font-size: .7rem;
+
+            @include mixins.miniheight {
+                line-height: 1.2;
+                font-size: .6rem;
+                margin: .1rem;
+            }
+
+            @include mixins.lateral {
+                margin-right: 1rem;
+                max-width: 100ch;
+            }
+
+            @include mixins.tablet {
+                margin: .5rem;
+            }
+
+            @include mixins.desktop {
+                margin: 1rem;
+            }
+
+            @include mixins.large {
+                font-size: .8rem;
+            }
+        }
+    }
+
+    &__stack {
+        box-sizing: border-box;
+        padding-top: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @include mixins.miniheight {
+            padding-top: 0;
+        }
+
+        @include mixins.lateral {
+            align-items: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 1rem;
+
+            @include mixins.miniheight {
+                padding-top: 0;
+            }
+
+            @include mixins.lateral {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mixins.desktop {
+                display: block;
+            }
+
+            li {
+                text-decoration: none;
+                color: var(--text-color);
+                max-width: 55ch;
+                font-family: "Montserrat", sans-serif;
+                text-transform: uppercase;
+                letter-spacing: .35rem;
+                line-height: 1.8;
+                font-size: .7rem;
+
+                @include mixins.miniheight {
+                    line-height: 1.2;
+                    font-size: .6rem;
+                    margin: .1rem;
+                }
+
+                @include mixins.lateral {
+                    margin-right: 1rem;
+                    max-width: 100ch;
+                }
+
+                @include mixins.tablet {
+                    margin: .5rem;
+                }
+
+                @include mixins.desktop {
+                    margin: 1rem;
+                }
+
+                @include mixins.large {
+                    font-size: .8rem;
+                }
+
+                span {
+                    max-width: 55ch;
+                    font-family: "Montserrat", sans-serif;
+                    text-transform: uppercase;
+                    letter-spacing: .35rem;
+                    line-height: 1.5;
+                    font-size: .7rem;
+
+                    @include mixins.miniheight {
+                        line-height: 1.2;
+                        font-size: .6rem;
+                        margin: .1rem;
+                    }
+
+                    @include mixins.lateral {
+                        margin-right: 1rem;
+                        max-width: 100ch;
+                    }
+
+                    @include mixins.tablet {
+                        margin: .5rem;
+                    }
+
+                    @include mixins.desktop {
+                        margin: 1rem;
+                    }
+
+                    @include mixins.large {
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__video {
+        box-sizing: border-box;
+        padding-top: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include mixins.miniheight {
+            padding-top: 0;
+        }
+
+        video {
+            display: block;
+            width: 90%;
+            height: auto;
+
+            cursor: pointer;
+
+            @include mixins.lateral {
+                width: 40%;
+            }
+
+            @include mixins.tablet {
+                width: 40%;
+            }
+
+            @include mixins.desktop {
+                width: 60%;
+            }
+
+            @include mixins.maxiheight {
+                width: 70%;
+            }
+            
+            @include mixins.large {
+                width: 50%;
+            }
+        }
+    }
+
+
+}

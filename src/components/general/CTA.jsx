@@ -8,7 +8,7 @@ export default function CTA({ link, state }) {
         rel="noopener noreferrer"
     >
         <span>Try Project</span>
-        <p>{state ?? "patatas"}</p>
+        <p>{state ?? ""}</p>
     </a>
   )
 }

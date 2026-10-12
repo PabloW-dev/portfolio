@@ -1,35 +1,56 @@
 import { NavLink, useLocation } from "react-router-dom";
 
 
-export default function Card({ project, currentIndex, carouselKey, modal }) {
+export default function Card({ content, currentIndex, carouselKey, modal }) {
   const location = useLocation();
 
   return (
     <article className="card">
-      <img src={project?.logo} alt="" className="card__img" />
+      {content.logo && (
+        <img src={content?.logo} alt="" className="card__img" />
+      )}
       <div className="card__title">
-        <h2>{project?.title}</h2>
-        <span>{project?.state}</span>
+        <h2>{content?.title}</h2>
+        <span>{content?.state}</span>
       
-        <p>{project?.description}</p>
+        <p>{content?.description}</p>
         
-        <NavLink to={project?.url} className="CTA__button"
-          onClick={() => {
-            if (!carouselKey) return;
-            
-            sessionStorage.setItem(`${carouselKey}-return`, JSON.stringify({
-              index: currentIndex,
-              locationKey: location.key
-          }))}}
-          tabIndex={modal.open ? -1 : 0}
-          style={{
-            pointerEvents: modal.open
-              ? "none"
-              : "auto"
-          }}
-        >
-          View Project
-        </NavLink>
+        {content.url && (
+          <NavLink to={content?.url} className="CTA__button"
+            onClick={() => {
+              if (!carouselKey) return;
+              
+              sessionStorage.setItem(`${carouselKey}-return`, JSON.stringify({
+                index: currentIndex,
+                locationKey: location.key
+            }))}}
+            tabIndex={modal.open ? -1 : 0}
+            style={{
+              pointerEvents: modal.open
+                ? "none"
+                : "auto"
+            }}
+          >
+            View Project
+          </NavLink>
+        )}
+        
+        {content.cert && (
+          <a
+            href={content.cert}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="CTA__button"
+            tabIndex={modal.open ? -1 : 0}
+            style={{
+              pointerEvents: modal.open
+                ? "none"
+                : "auto"
+            }}
+          >
+            View Certificate
+          </a>
+        )}
       </div>
     </article>
   )

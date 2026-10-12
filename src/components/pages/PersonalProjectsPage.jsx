@@ -46,7 +46,7 @@ export default function PersonalProjectsPage({ initialIndex, modal }) {
         </section>
 
         {projects.map((project) => (
-            <Card key={project.title} project={project} carouselKey={carouselKey} modal={modal} />
+            <Card key={project.title} content={project} carouselKey={carouselKey} modal={modal} />
         ))}
 
         <section className="personal-projects__incoming">

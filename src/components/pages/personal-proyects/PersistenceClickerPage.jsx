@@ -60,6 +60,10 @@ export default function PersistenceClickerPage() {
           <div>
             <h1>Persistence Clicker</h1>
             <p>React · JS · SCSS · Vite</p>
+            <a href="https://github.com/PabloW-dev/PersistenceClicker"
+              target="_blank"
+              rel="noopener noreferrer"
+            ><p>Link to Git Repository</p></a>
           </div>
         </section>
           

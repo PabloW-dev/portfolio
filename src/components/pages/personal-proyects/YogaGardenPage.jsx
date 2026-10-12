@@ -89,6 +89,10 @@ export default function YogaGardenPage() {
           <div>
             <h1>Yoga Garden</h1>
             <p>React · JS · SCSS · Vite</p>
+            <a href="https://github.com/PabloW-dev/YogaGarden"
+              target="_blank"
+              rel="noopener noreferrer"
+            ><p>Link to Git Repository</p></a>
           </div>
         </section>
           

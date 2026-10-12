@@ -67,7 +67,9 @@ export default function App() {
           />
 
           <Route path="/skills-tech" 
-            element={<SkillsTechsPage />} />
+            element={<SkillsTechsPage 
+              modal={modal}
+              />} />
           <Route path="/external-projects" 
             element={<ExternalProyectsPage />} />
 

@@ -81,6 +81,20 @@
             line-height: 1.5;
             font-size: .7rem;
         }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .35rem;
+            line-height: 1.5;
+            font-size: .7rem;
+
+            p {
+                color: var(--button-text);
+            }
+        }
     }
 
     &__WII {
