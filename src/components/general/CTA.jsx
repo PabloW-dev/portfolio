@@ -7,7 +7,7 @@ export default function CTA({ link, state }) {
         target="_blank"
         rel="noopener noreferrer"
     >
-        <span>Try Project</span>
+        <span>Try It</span>
         <p>{state ?? ""}</p>
     </a>
   )
